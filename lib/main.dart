@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kidsuz/constants.dart';
+import 'package:kidsuz/screens/Games/mathGame/chooseGameType.dart';
+import 'package:kidsuz/screens/Games/mathGame/introPage.dart';
 import 'package:kidsuz/screens/Games/memory.dart';
 import 'package:kidsuz/screens/animals_screen.dart';
 import 'package:kidsuz/screens/family_screen.dart';
@@ -30,10 +32,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kiddo',
-      theme: ThemeData(scaffoldBackgroundColor: AppColors.backGround),
+      theme: ThemeData(
+          useMaterial3: false,
+          scaffoldBackgroundColor: AppColors.backGround,
+          fontFamily: 'Kalam'),
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => SplashScreen(),
+        '/Intro': (context) => ChooseGameType(),
         '/Main': (context) => MainScreen(),
         '/Nums': (context) => NumsScreen(),
         '/Animals': (context) => AnimalScreen(),
@@ -48,13 +54,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// class MusicHandler extends WidgetsBindingObserver {
-//   void didChangeAppLifecycleState(AppLifecycleState state) {
-//     if (state == AppLifecycleState.paused) {
-//       Music.music.pause();
-//     } else if (state == AppLifecycleState.resumed) {
-//       Music.music.resume();
-//     }
-//   }
-// }

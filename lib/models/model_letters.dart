@@ -29,6 +29,7 @@ class _ModelStyleState extends State<ModelStyle> {
       child: Column(
         children: [
           Container(
+            padding: EdgeInsets.all(0),
             margin: EdgeInsets.only(left: 20, right: 10),
             height: 240,
             child: Stack(

@@ -13,9 +13,9 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushNamed(context, '/Main');
     });
 
-    return new Scaffold(
-      backgroundColor: AppColors.black,
-      body: Align(
+    return Container(
+      decoration: BoxDecoration(gradient: AppColors.background),
+      child: Align(
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

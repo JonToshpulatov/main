@@ -13,7 +13,7 @@ class _FamilyScreenState extends State<FamilyScreen> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        backgroundColor: AppColors.black,
+        backgroundColor: AppColors.Lpink,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -23,9 +23,12 @@ class _FamilyScreenState extends State<FamilyScreen> {
         title:
             Image.asset('assets/images/Logo_color.png', width: 65, height: 65),
       ),
-      backgroundColor: AppColors.black,
-      body: Center(
-        child: buildModels(),
+      backgroundColor: Color.fromRGBO(1, 1, 1, 0),
+      body: Container(
+        decoration: BoxDecoration(gradient: AppColors.background),
+        child: Center(
+          child: buildModels(),
+        ),
       ),
     );
   }
@@ -35,7 +38,7 @@ class _FamilyScreenState extends State<FamilyScreen> {
       itemCount: familyList.length,
       itemBuilder: (context, index) {
         return ModelStyle(
-          cardModel: new CustomCardModel(
+          cardModel: CustomCardModel(
               title: familyList[index]['name'].toString(),
               image: familyList[index]['imagePath'].toString()),
         );

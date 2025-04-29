@@ -36,6 +36,8 @@ dependencies:
   audioplayers: ^0.20.1
   vibration: ^1.7.4-nullsafety.0
   platform: ^3.1.0
+  get: ^4.6.5
+  change_app_package_name: ^1.1.0
 
 
 
@@ -64,6 +66,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/
+  - assets/games/images/
   - assets/images/
   - assets/numbers/
   - assets/counters/
@@ -75,6 +78,10 @@ flutter:
   - assets/games/
   - assets/vegetables/
   - assets/fruits/
+  fonts:
+    - family: Kalam
+      fonts:
+        - asset: assets/fonts/Kalam-Light.ttf
 
 
 

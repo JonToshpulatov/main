@@ -14,7 +14,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.black,
+        backgroundColor: AppColors.Lpink,
         body: SingleChildScrollView(
           child: SingleChildScrollView(
             child: Column(
@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
   Container header() {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.backGround,
+        gradient: AppColors.auth_backround,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(15),
           bottomRight: Radius.circular(15),
@@ -103,12 +103,12 @@ class _MainScreenState extends State<MainScreen> {
       },
       child: Container(
         margin: EdgeInsets.all(18),
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: selectedCard == index
-                ? AppColors.backGround
-                : AppColors.secondary,
+            gradient: selectedCard == index
+                ? AppColors.background
+                : AppColors.auth_backround,
             boxShadow: [
               BoxShadow(
                 color: AppColors.secondary,
@@ -120,11 +120,13 @@ class _MainScreenState extends State<MainScreen> {
           children: [
             Container(
               color: Colors.transparent,
-              height: 90,
-              width: 90,
+              height: 120,
+              width: 120,
               child: Image.asset(imagePath, fit: BoxFit.contain),
             ),
-            PrimaryText(text: name, fontWeight: FontWeight.w800, size: 16),
+            Expanded(
+                child: PrimaryText(
+                    text: name, fontWeight: FontWeight.w800, size: 16)),
           ],
         ),
       ),
@@ -133,7 +135,7 @@ class _MainScreenState extends State<MainScreen> {
 
   SizedBox buildCards(BuildContext context) {
     return SizedBox(
-      height: 580,
+      height: 650,
       child: GridView.count(
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 2,

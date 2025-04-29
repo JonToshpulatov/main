@@ -24,6 +24,27 @@ class AppColors {
   static const sage = Color(0xffdaf2dc);
   static const pale = Color(0xffeacfff);
   static const tale = Color(0xffdaf2dc);
+  static const background = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment(0.8, 1),
+    colors: <Color>[
+      Color.fromRGBO(255, 255, 255, 1),
+      Color.fromRGBO(209, 234, 255, 1),
+      Color.fromRGBO(209, 234, 255, 1),
+      Color.fromRGBO(245, 225, 255, 1),
+      Color.fromRGBO(245, 225, 255, 1)
+    ], // Gradient from https://learnui.design/tools/gradient-generator.html
+    tileMode: TileMode.mirror,
+  );
+  static const auth_backround = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment(0.8, 1),
+    colors: <Color>[
+      Color.fromRGBO(0, 177, 255, 1),
+      Color.fromRGBO(154, 39, 255, 1),
+    ], // Gradient from https://learnui.design/tools/gradient-generator.html
+    tileMode: TileMode.mirror,
+  );
 }
 
 //FONT STYLING
@@ -55,7 +76,6 @@ class PrimaryText extends StatelessWidget {
     );
   }
 }
-
 
 const CardsList = [
   {
@@ -109,11 +129,13 @@ const routesList = [
 const GamesList = [
   {'GameName': 'Rangini top', 'imagePath': 'assets/games/color.png'},
   {'GameName': 'Eslab qol', 'imagePath': 'assets/games/memo.png'},
+  {'GameName': 'Super Math', 'imagePath': 'assets/games/add.png'},
 ];
 
 const gamesRoutes = [
   {'routePath': '/Color'},
   {'routePath': '/Memory'},
+  {"routePath": "/Intro"}
 ];
 
 //NUMS LIST

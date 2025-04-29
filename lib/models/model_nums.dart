@@ -103,7 +103,7 @@ class _ModelStyleState extends State<ModelStyle> {
                 ),
                 Positioned(
                   top: 55,
-                  left: 200,
+                  left: 150,
                   child: Container(
                     height: 125,
                     width: 160,

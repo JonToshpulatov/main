@@ -1,4 +1,4 @@
-package com.example.kidsuz
+package com.diasol.nextgen.name
 
 import io.flutter.embedding.android.FlutterActivity
 

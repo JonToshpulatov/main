@@ -10,35 +10,44 @@ class _GameScreenState extends State<GameScreen> {
   int selectedCard = -1;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: AppColors.black,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back, color: AppColors.backGround),
-        ),
-        title:
-            Image.asset('assets/images/Logo_color.png', width: 65, height: 65),
-      ),
-      backgroundColor: AppColors.black,
-      body: SingleChildScrollView(
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              buildCards(context),
-              Container(
-                height: 120,
-                width: ScreenSize(context).width,
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Image.asset("assets/gamesFooter.png"),
-                ),
-              )
-            ],
+        body: Container(
+          decoration: BoxDecoration(gradient: AppColors.background),
+          child: SingleChildScrollView(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    height: 50,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: Icon(Icons.arrow_back,
+                                color: AppColors.backGround),
+                          ),
+                          Image.asset('assets/images/Logo_color.png',
+                              width: 65, height: 65),
+                          Text("            "),
+                        ]),
+                  ),
+                  buildCards(context),
+                  Container(
+                    height: 120,
+                    width: ScreenSize(context).width,
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Image.asset("assets/gamesFooter.png"),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ),

@@ -51,7 +51,7 @@ class _MemoryState extends State<Memory> {
         children: <Widget>[
           SizedBox(height: 45),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               scoreBoard("Urinishlar", "$tries"),
@@ -144,7 +144,7 @@ class _MemoryState extends State<Memory> {
 Widget scoreBoard(String title, String info) {
   return Expanded(
     child: Container(
-      margin: EdgeInsets.all(25.0),
+      margin: EdgeInsets.all(15.0),
       padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
       decoration: BoxDecoration(
           color: AppColors.white, borderRadius: BorderRadius.circular(6.0)),
